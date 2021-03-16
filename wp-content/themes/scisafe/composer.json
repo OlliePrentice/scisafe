@@ -1,0 +1,11 @@
+{
+    "name": "theme/boilerplate",
+    "description": "Helper packages for boilerplate",
+    "require-dev": {
+        "squizlabs/php_codesniffer": "*",
+        "wp-coding-standards/wpcs": "^0.13.1"
+    },
+    "require": {
+        "mobiledetect/mobiledetectlib": "^2.8"
+    }
+}

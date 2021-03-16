@@ -1,0 +1,282 @@
+body {
+    padding-top: 115px;
+
+    @apply font-body font-light text-xxl tracking-wide text-primary;
+
+}
+
+ol, ul {
+    padding-left: 1.2rem;
+}
+
+ol {
+    list-style: decimal;
+}
+
+ul {
+    li {    
+        &:before {
+            content: '';
+            display: inline-block;
+            position: relative;
+            left: calc(-1.2rem + 0.5em);
+            width: 0.5em;
+            height: 0.5em;
+            margin-left: -0.5em;
+            background: url(../images/svgs/bullet.svg) center no-repeat;
+            background-size: contain;
+        }
+    }
+}
+
+a {
+    @apply transition;
+
+    span {
+        transition: none;
+    }
+}
+
+.btn {
+    z-index: 1;
+
+    @apply inline-block relative pr-14 pl-5 py-3 text-lg leading-relaxed font-display font-medium text-primary no-underline uppercase transition;
+
+    &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        width: 55px;
+        height: 100%;
+
+        @apply border-2 border-secondary opacity-50 transition-all duration-300;    
+    }
+
+    &__arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+
+        @apply right-4;
+
+        svg path {
+            @apply transition-all duration-300;    
+        }
+    }
+
+    &:hover {
+
+        @apply text-white;
+
+        &:before {
+            width: 100%;
+
+            @apply opacity-100 bg-secondary;
+        }
+
+        .btn__arrow {
+            svg path {
+                fill: white;
+            }
+        }
+    }
+
+    &--standard {
+
+        @apply px-5 border-2 border-senary text-senary;
+
+        &:before {
+            display: none;
+        }
+
+        &:hover {
+            @apply opacity-60 bg-senary text-white;
+        }
+
+        &.active {
+            @apply bg-senary text-white opacity-100;
+        }
+
+    }
+
+    &--alt {
+    
+        &:before {
+            @apply border-senary opacity-100;    
+        }
+    
+        .btn__arrow {
+            svg path {
+                @apply text-senary fill-current;    
+            }
+        }
+    
+        &:hover {
+            &:before {
+                @apply bg-senary;
+            }
+        }
+    }
+}
+
+.buttons {
+    @apply -mx-3;
+
+    > .btn-wrap {
+        @apply mb-3 px-3;
+    }
+}
+
+.stripes {
+    position: relative;
+    width: 90%;
+    max-width: 1215px;
+    height: 8px;
+    margin: 0 auto;
+    border-radius: 8px;
+
+    @apply bg-primary;
+
+    &.stripes--small {
+        max-width: 705px;
+        height: 3px;
+        margin: 0;
+
+        &:before, &:after {
+            top: -10px;
+            height: 3px;
+        }
+
+        &:after {
+            top: -20px;
+
+            @apply bg-tertiary;
+        }
+    }
+
+    &:before, &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: -20px;
+        left: -4%;
+        width: 85%;
+        max-width: 1055px;
+        height: 8px;
+        border-radius: 8px;
+
+        @apply bg-secondary;
+    }
+
+    &:after {
+        top: -40px;
+        left: -8%;
+        width: 80%;
+        max-width: 875px;
+
+        @apply bg-senary;
+    }
+}
+
+.gradient-wrap {
+    z-index: 1;
+
+    &:before, &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        width: 100%;
+        height: 50%;
+        background: linear-gradient(to top, rgba(white, 1), rgba(white, 0));
+    }
+
+    &:after {
+        top: 0;
+        bottom: auto;
+        z-index: -1;
+        background: linear-gradient(to bottom, rgba(white, 1), rgba(white, 0));
+    }
+}
+
+.dropdown {
+
+    &.active {
+        .plus {
+            transform: rotate(45deg);
+        }
+    }
+
+    &__content {
+        display: none;
+    }
+}
+
+.plus {
+    display: block;
+    position: relative;
+    width: 28px;
+    height: 28px;
+
+    &:before, &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 1px;
+        transform: translateX(-50%) translateY(-50%);
+
+        @apply bg-senary;
+    }
+
+    &:after {
+        width: 1px;
+        height: 100%;
+    }
+}
+
+
+
+body {
+    .swiper-button-next, .swiper-button-prev {
+        display: inline-block;
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        width: 50px;
+        height: 50px;
+        margin: 0 .4rem;
+        transform: translateY(0);
+
+        &:after {
+            display: none;
+        }
+
+        &:before {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: url(../images/svgs/chevron-left.svg) center no-repeat;
+            background-size: 15px;
+
+            @apply border-2 border-senary;
+        }
+    }
+
+    .swiper-button-next {
+        &:before {
+            background: url(../images/svgs/chevron-right.svg) center no-repeat;
+            background-size: 15px;
+        }
+    }
+}

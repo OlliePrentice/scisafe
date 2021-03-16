@@ -1,0 +1,36 @@
+.image-box {
+    z-index: 1;
+
+    &--small, &--medium {
+        .image-box__image {
+            position: absolute;
+            right: 0;
+            z-index: -1;
+            width: 72%;
+            height: calc(100% - 4rem);
+
+            @apply top-16;
+        }
+        .image-box__inner {
+            @apply pb-16;
+        }
+
+    }
+
+    &--medium {
+        .image-box__image {
+            top: 0;
+            width: 90%;
+            height: 100%;
+        }
+
+        .image-box__inner {
+            @apply pt-72 pb-16;
+        }
+    }
+
+    &__image {
+        height: 710px;
+    }
+
+}

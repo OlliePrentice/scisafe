@@ -1,0 +1,11 @@
+.carousel {
+
+    &__navigation {
+        .swiper-button-prev {
+            &:after {
+                display: none;
+            }
+        }
+    }
+
+}

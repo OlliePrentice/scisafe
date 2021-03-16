@@ -1,0 +1,71 @@
+.timeline {
+
+    .swiper-container {
+        overflow: visible;
+    }
+
+
+    &__events {
+        .swiper-wrapper {
+            align-items: flex-end;
+
+            &:before {
+                content: '';
+                display: block;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 2000vw;
+                height: 3px;
+                transform: translateY(-50%);
+                
+                @apply bg-secondary;
+            }
+    
+        }
+
+        .swiper-slide {
+            position: relative;
+            width: 280px;
+
+            &.timeline__slide--short {
+                width: 80px;
+            }
+        }
+    }
+
+    &__spacer {
+        height: 100%;
+    }
+
+    &__event {
+        width: 280px;
+        padding-left: 30px;
+
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: -20px;
+            width: 50px;
+            height: 57px;
+            background: url(../../images/svgs/timeline-icon-above.svg) center no-repeat;
+            background-size: contain;
+            
+        }
+
+        &--below {
+            transform: translateY(100%);
+
+            &:before {
+                top: 0;
+                bottom: auto;
+                background: url(../../images/svgs/timeline-icon-below.svg) center no-repeat;
+                background-size: contain;
+            }
+        }
+
+
+    }
+}

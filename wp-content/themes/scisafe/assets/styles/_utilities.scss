@@ -1,0 +1,40 @@
+.remove-last-margin {
+    > * {
+      &:last-child {
+          margin-bottom: 0;
+      }
+    }
+}
+
+.img-full {
+    img {
+        width: 100%;
+    }
+}
+
+.theme-dark {
+
+    h1,h2,h3,h4,h5,h6,p,li,span {
+        @apply text-white;
+    }
+
+    .btn {
+        @apply text-white;
+    
+        &:before {
+            @apply border-senary opacity-100;    
+        }
+    
+        &__arrow {
+            svg path {
+                @apply text-senary fill-current;    
+            }
+        }
+    
+        &:hover, &:focus {
+            &:before {
+                @apply bg-senary;
+            }
+        }
+    }
+}

@@ -1,0 +1,25 @@
+@import "~tailwindcss/base";
+@import "~tailwindcss/components";
+
+@import "~aos/dist/aos.css";
+
+@import "variables";
+@import "wp-core";
+@import "theme";
+@import "typography";
+@import "utilities";
+@import "form";
+
+@import "structures/header";
+
+@import "blocks/icon-grid";
+@import "blocks/image-box";
+@import "blocks/full-width-image";
+@import "blocks/timeline";
+@import "blocks/title-background";
+@import "blocks/carousel";
+
+@import "components/burger";
+@import "components/mobile-navigation";
+@import "components/locations";
+@import "components/card-service";

@@ -1,0 +1,8 @@
+.title-background {
+    position: relative;
+    z-index: 1;
+
+    &__image {
+        z-index: -1;
+    }
+}
