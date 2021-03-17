@@ -5,7 +5,7 @@ $images = get_field( 'images' );
 ?>
 
 <?php if ( $images ) : ?>
-    <div class="carousel text-right md:text-left -mx-4 md:mx-0" data-aos="fade">
+    <div class="carousel text-right md:text-left -mx-4 md:mx-0">
         <div class="carousel__images swiper-container">
             <div class="swiper-wrapper">
                 <?php foreach ( $images as $image_id ) : ?>
