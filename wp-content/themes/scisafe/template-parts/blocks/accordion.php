@@ -1,8 +1,8 @@
 <?php if ( have_rows( 'items' ) ) : ?>
-    <div class="accordion pl-14">
-        <div class="w-8/12">
-            <?php while ( have_rows( 'items' ) ) : the_row(); ?>
-                <?php
+	<div class="accordion lg:pl-14">
+		<div class="lg:w-8/12">
+			<?php while ( have_rows( 'items' ) ) : the_row(); ?>
+				<?php
 
                 $dropdown = [
                     'heading'   => get_sub_field( 'heading' ),

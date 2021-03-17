@@ -1,5 +1,5 @@
 <?php if ( have_rows( 'items' ) ) : ?>
-    <div class="icon-grid md:pl-14">
+    <div class="icon-grid lg:pl-14">
         <div class="flex flex-wrap justify-between items-center -mx-4">
             <?php while ( have_rows( 'items' ) ) : the_row(); ?>
                 <?php
@@ -8,7 +8,7 @@
                 $text = get_sub_field( 'text' );
                 
                 ?>
-                <div class="w-1/3 px-4 mb-12 icon-grid__item">
+                <div class="w-full sm:w-6/12 lg:w-1/3 px-4 mb-12 icon-grid__item">
                     <div class="flex flex-wrap items-center -mx-4">
                         <?php if ( $icon ) : ?>
                             <div class="px-4">

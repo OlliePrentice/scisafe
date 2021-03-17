@@ -120,7 +120,7 @@ function sci_pre_posts($query)
                 if ($block['blockName'] === 'acf/post-loop') {
                     
                     $_post_type = !empty($block['attrs']['data']['post_type']) ? $block['attrs']['data']['post_type'] : $default_post_type;
-                    $_posts_per_page = !empty($block['attrs']['data']['posts_per_page']) ? $block['attrs']['data']['posts_per_page'] : 8;
+                    $_posts_per_page = !empty($block['attrs']['data']['posts_per_page']) ? $block['attrs']['data']['posts_per_page'] : get_option( 'posts_per_page' );
 
                 }
             }

@@ -7,7 +7,7 @@ $layout     = ! empty( $args[ 'layout' ] ) ? $args[ 'layout' ] : '';
 
 ?>
 
-<div class="box p-14 pb-10 bg-primary theme-dark">
+<div class="box p-8 sm:p-10 md:p-14 pb-6 sm:pb-8 md:pb-10 bg-primary theme-dark">
     <?php if ( $heading ) : ?>
         <h3><?php echo $heading; ?></h3>    
     <?php endif; ?>

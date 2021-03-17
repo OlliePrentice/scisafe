@@ -31,6 +31,7 @@
     "@barba/core": "^2.9.7",
     "@fancyapps/fancybox": "^3.5.7",
     "aos": "^2.3.4",
+    "axios": "^0.21.1",
     "core-js": "^3.7.0",
     "gsap": "^3.6.0",
     "headroom.js": "^0.12.0",
@@ -45,6 +46,8 @@
     "regenerator-runtime": "^0.13.7",
     "stickybits": "^3.7.8",
     "swiper": "^6.3.5",
+    "three": "^0.126.1",
+    "three-js": "^79.0.0",
     "tippy.js": "^6.2.7"
   },
   "scripts": {

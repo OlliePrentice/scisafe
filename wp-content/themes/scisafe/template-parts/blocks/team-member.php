@@ -7,7 +7,7 @@ $thumbnail      = get_the_post_thumbnail( $member->ID, 'full' );
 
 ?>
 
-<div class="team-member md:pl-14">
+<div class="team-member lg:pl-14">
     <div class="flex flex-wrap -mx-4 items-center">
         <div class="w-full md:w-1/2 px-4 mb-8">
             <?php if ( $thumbnail ) : ?>

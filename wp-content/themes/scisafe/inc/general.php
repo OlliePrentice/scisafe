@@ -54,7 +54,7 @@ Menus
 - enable WordPress Menus
  */
 if (function_exists('register_nav_menus')) {
-    register_nav_menus(['header' => __('Main Nav'), 'footer' => __('Footer Nav')]);
+    register_nav_menus(['primary' => __('Primary Nav'), 'secondary' => __('Seondary Nav')]);
 }
 
 /*

@@ -18,10 +18,26 @@ add_action('acf/init', function () {
     if (function_exists('acf_register_block')) {
 
         acf_register_block_type([
-            'name'              => 'full-container',
+            'name'              => 'full_container',
             'title'             => __('Full Container'),
             'mode'              => 'preview',
             'render_template'   => '/template-parts/containers/full-container.php',
+            'category'          => 'layout',
+            'icon'              => 'admin-comments',
+            'supports'          => array(
+                'align'         => false,
+                'multiple'      => true,
+                'jsx'           => true,
+                'anchor'        => true
+            ),
+
+        ]);
+
+        acf_register_block_type([
+            'name'              => 'article_container',
+            'title'             => __('Article Container'),
+            'mode'              => 'preview',
+            'render_template'   => '/template-parts/containers/article-container.php',
             'category'          => 'layout',
             'icon'              => 'admin-comments',
             'supports'          => array(
@@ -58,7 +74,7 @@ add_action('acf/init', function () {
             'category'          => 'page-blocks',
             'keywords'          => ['Block'],
             'mode'              => 'edit',
-            'layout'            => true,
+            'layout'            => 'full',
             'supports'          => array(
                 'align'         => false,
                 'multiple'      => true,

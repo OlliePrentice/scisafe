@@ -1,5 +1,5 @@
 <?php if ( have_rows( 'columns' ) ) : ?>
-    <div class="content-columns md:pl-14">
+    <div class="content-columns lg:pl-14">
         <div class="flex flex-wrap -mx-4">
             <?php while ( have_rows( 'columns' ) ) : the_row(); ?>
                 <?php if ( $copy = get_sub_field( 'copy' ) ) : ?>

@@ -32,6 +32,7 @@ module.exports = {
         'lg':   ['1.063rem', '1.75rem'],
         'xxl':  ['1.375rem', '1.875rem'],
         '2xl':  ['1.563rem', '2rem'],
+        '3xxl': ['2.188rem', '2.563rem'],
         '4xl':  ['2.5rem', '2.75rem'],
         '5xl':  ['3rem', '3.25rem'],
         '6xl':  ['3.438rem', '3.75rem'] 

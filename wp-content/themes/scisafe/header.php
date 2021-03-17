@@ -17,6 +17,7 @@
         <link rel="stylesheet"
               href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"/>
     </noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
 </head>
 
 <body <?php body_class(); ?>>
@@ -27,14 +28,14 @@ $logo = get_field( 'logo', 'options' );
 
 ?>
 
-<header class="main-header fixed top-0 left-0 z-50 w-full bg-white">
+<header class="main-header fixed top-0 left-0 z-50 w-full bg-white md:bg-transparent transition-all">
     <div class="container mx-auto">
-        <div class="flex py-8 -mx-2 items-center">
+        <div class="flex py-5 md:py-8 sm:px-2 md:px-0 -mx-2 items-center">
             <?php if ( $logo ) : ?>
                 <div class="flex-auto px-2">
-                    <div class="main-header__logo">
+                    <div class="main-header__logo w-28 sm:w-auto">
                         <a href="<?= home_url('/'); ?>"
-                           class="main-header__logo-link">
+                           class="main-header__logo-link inline-block">
                             <img src="<?php echo $logo['url']; ?>" alt="<?php echo $logo['alt']; ?>">   
                         </a>
                     </div>

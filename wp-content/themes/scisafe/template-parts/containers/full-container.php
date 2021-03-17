@@ -11,7 +11,7 @@ $classes[] = padding_classes();
 
 ?>
 
-<div id="<?php echo $id; ?>" class="full-container <?php echo implode( ' ', $classes ); ?>">
+<div id="<?php echo $id; ?>" class="full-container <?php echo implode( ' ', $classes ); ?>" data-aos="fade">
     <div class="container mx-auto" data-aos="fade">
         <?php
         echo '<InnerBlocks/>';

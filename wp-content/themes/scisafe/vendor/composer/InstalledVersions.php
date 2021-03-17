@@ -19,7 +19,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '9bebd9b5c618e1455685f1e4879920c8f5bc2872',
+    'reference' => 'fe699c195c6a2017ae5070ecaa15a706e6a0ccad',
     'name' => 'theme/boilerplate',
   ),
   'versions' => 
@@ -49,7 +49,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '9bebd9b5c618e1455685f1e4879920c8f5bc2872',
+      'reference' => 'fe699c195c6a2017ae5070ecaa15a706e6a0ccad',
     ),
     'wp-coding-standards/wpcs' => 
     array (

@@ -2,6 +2,7 @@ import resizeEvent from '../utilities/triggerResizeEvent';
 import InfiniteScroll from 'infinite-scroll';
 import imagesLoaded from 'imagesloaded';
 import getPathFromUrl from '../utilities/getPathFromUrl';
+import urlExists from '../utilities/urlExists';
 
 function Posts() {
 
@@ -103,11 +104,12 @@ function Posts() {
             _taxQuery: taxQuery,
             _postTypes: postTypes,
             _perPage: parseInt(postsPerPage)
-        }
+        };
 
         const nextLink = getPathFromUrl($('.next-posts-link a').attr('href'));
 
         $('.next-posts-link a').attr('href', nextLink + encodeURI(urlString));
+
 
         $.ajax({
             url: theme_params.ajaxurl,
@@ -121,7 +123,12 @@ function Posts() {
 
             $(responseObj.content).insertBefore('.post-loop .pagination');
         
-            infinitePosts();
+            urlExists(nextLink + encodeURI(urlString), (exists) => {
+                if(exists) {
+                    infinitePosts();
+                }
+            });
+            
 
         }).fail((err) => {
             console.log(err);
@@ -129,6 +136,6 @@ function Posts() {
 
     });
 
-};
+}
 
 export default Posts;

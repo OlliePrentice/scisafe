@@ -1,5 +1,5 @@
 function Menu() {
-    const $masthead = $(".masthead"),
+    const $masthead = $(".main-header"),
         $burger = $(".burger"),
         $mobileNav = $(".mobile-navigation"),
         $closeModal = $('.close-modal'),
@@ -18,6 +18,7 @@ function Menu() {
 
         if ($this.hasClass("active")) {
             $mobileNav.addClass("active");
+            $masthead.addClass("active");
         } else {
             $mobileNav.removeClass('active');
             $mobileNav.removeClass('sub-open');

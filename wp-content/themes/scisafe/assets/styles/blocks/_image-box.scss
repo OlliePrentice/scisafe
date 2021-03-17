@@ -3,34 +3,73 @@
 
     &--small, &--medium {
         .image-box__image {
-            position: absolute;
-            right: 0;
-            z-index: -1;
-            width: 72%;
-            height: calc(100% - 4rem);
+            height: 395px;
+    
+            @screen md {
+                position: absolute;
+                right: 0;
+                z-index: -1;
+                width: 72%;
+                height: calc(100% - 4rem);
 
-            @apply top-16;
+                @apply top-16;
+            }
         }
         .image-box__inner {
-            @apply pb-16;
+
+            @screen md {
+                @apply pb-16;
+            }
         }
 
+    }
+
+    &--small {
+        .box {
+            @apply -mb-40;
+
+            @screen md {
+                @apply mb-0;
+            }
+        }
     }
 
     &--medium {
         .image-box__image {
-            top: 0;
-            width: 90%;
-            height: 100%;
+        
+            @screen md {
+                top: 0;
+                width: 90%;
+                height: 100%;
+            }
         }
 
         .image-box__inner {
-            @apply pt-72 pb-16;
+            @screen md {
+                @apply pt-72 pb-16;
+            }
+        }
+
+        .box {
+            @apply -mt-28;
+
+            @screen md {
+                @apply mt-0;
+            }
         }
     }
 
     &__image {
-        height: 710px;
+        height: 540px;
+
+        @screen sm {
+            height: 710px;
+        }
+    }
+
+    .box {
+        position: relative;
+        z-index: 5;
     }
 
 }

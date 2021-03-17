@@ -6,6 +6,14 @@
     }
 }
 
+.remove-bullets {
+    li {
+        &:before {
+            display: none;
+        }
+    }
+}
+
 .img-full {
     img {
         width: 100%;

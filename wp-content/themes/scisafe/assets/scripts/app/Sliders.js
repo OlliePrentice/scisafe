@@ -29,7 +29,12 @@ function Sliders() {
 
         initSwiper(elem, {
             slidesPerView: 'auto',
-            spaceBetween: 100,
+            spaceBetween: 50,
+            breakpoints: {
+                768: {
+                    spaceBetween: 100
+                }
+            }
         });
 
     });

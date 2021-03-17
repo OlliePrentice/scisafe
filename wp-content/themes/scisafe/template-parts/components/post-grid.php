@@ -14,7 +14,7 @@ $_query = $args['query'];
             if ( get_post_type( get_the_ID() ) === 'service' ) {
                 $item_classes[] = 'w-full';
             } else {
-                $item_classes[] = 'w-4/12';
+                $item_classes[] = 'w-full md:w-6/12 xl:w-4/12';
             }
 
             ?>

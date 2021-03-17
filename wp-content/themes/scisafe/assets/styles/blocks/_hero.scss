@@ -1,0 +1,77 @@
+canvas {
+    height: 100%;
+    width: 100%!important;
+  }
+  
+  .home_cube {
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    width: 100%;
+    outline: 0!important;
+
+    * {
+        outline: 0!important; 
+    }
+  }
+  
+  .pop_up {
+  
+
+    position: absolute;
+    display: none;
+   
+    opacity: 0;
+    
+    
+    top: unset;
+    bottom: 0;
+
+    @apply bg-white p-3 mx-4 max-w-xl;
+
+  
+  
+    h3 {
+      font-family: 'Raleway', sans-serif;
+      margin-bottom: 1.2rem;
+      font-size: 1.375rem;
+      color: #1B2C41;
+    }
+  
+    p {
+      font-family: 'Alegreya Sans', sans-serif;
+      letter-spacing: 0.019375rem;
+      line-height: 1.5rem;
+      font-size: 1.125rem;
+      color: #1B2C41;
+    }
+  
+  }
+
+@screen md {
+    .pop_up {
+        bottom: 10%;
+
+        @apply p-5;
+    }
+}
+  
+@screen lg {
+    .pop_up {
+        bottom: auto;
+        top: 50%;
+        right: calc( .5rem + 3vw );
+        transform: translateY(-50%);
+        width: 30%;
+        max-width: none;
+        padding: 3rem;
+        margin: 0;
+     
+        background-color: rgba( 256, 256, 256, 0.3 );
+ 
+    }
+}
+  
+  

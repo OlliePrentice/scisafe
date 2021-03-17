@@ -261,16 +261,16 @@ function padding_classes()
 
     $padding_options = get_field('padding_options');
 
-    $classes_string = ' py-8 md:py-10 lg:py-12';
+    $classes_string = ' py-6 md:py-10 lg:py-12';
 
     if($padding_options) {
 
         if (in_array('No Top Padding', (array)$padding_options)) {
-            $classes_string = ' pb-8 md:pb-10 lg:pb-12';
+            $classes_string = ' pb-6 md:pb-10 lg:pb-12';
         }
 
         if (in_array('No Bottom Padding', (array)$padding_options)) {
-            $classes_string = ' pt-8 md:pt-10 lg:pt-12';
+            $classes_string = ' pt-6 md:pt-10 lg:pt-12';
         }
 
         if (in_array('No Top Padding', (array)$padding_options) && in_array('No Bottom Padding', (array)$padding_options)) {

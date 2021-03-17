@@ -7,9 +7,9 @@ $image      = get_field( 'image' );
 
 ?>
 
-<div class="content-graphic md:pl-14">
+<div class="content-graphic lg:pl-14">
     <div class="flex flex-wrap -mx-4 items-center">
-        <div class="w-1/2 px-4">
+        <div class="w-full md:w-1/2 px-4">
             <div class="max-w-xl">
                 <?php if ( $heading ) : ?>
                     <h2><?php echo $heading; ?></h2>
@@ -24,7 +24,7 @@ $image      = get_field( 'image' );
                 <?php endif; ?>
             </div>
         </div>
-        <div class="w-1/2 px-4">
+        <div class="w-full md:w-1/2 px-4 pt-5 md:pt-0">
             <?php if ( $image ) : ?>
                 <div class="text-right">
                     <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" class="ml-auto">

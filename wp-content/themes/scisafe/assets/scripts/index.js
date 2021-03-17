@@ -15,12 +15,17 @@ import Sliders from './app/Sliders';
 import General from './app/General';
 import Posts from './app/Posts';
 import Accordion from './app/Accordion';
+import ThreeCube from './app/cube/3DCube';
 
+(function() {
+    
+    ThreeCube(); 
+
+ })();
 
 window.onload = () => {
 
     // Load Imports
-
     Sliders();
     General();
     Menu();

@@ -2,53 +2,47 @@
     position: fixed;
     top: 0;
     right: 0;
-    z-index: 299;
+    z-index: 49;
     width: 100%;
-    max-width: 90%;
     height: 100vh;
     overflow-x: hidden;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
     background: white;
-    transition: all 600ms;
+    transition: all 400ms;
     pointer-events: none;
     opacity: 0;
     visibility: hidden;
-    padding: 1.5rem 30px;
-    transform: translateX(100%);
-
-    @media only screen and (min-width: 768px) {
-        max-width: 700px;
-        padding: 3rem 100px;
-    }
-
-    .burger {
-        margin-right: -14px;
-
-        @media only screen and (min-width: 768px) {
-            margin-right: 0;
-        }
-    }
 
     &.active {
         opacity: 1;
         visibility: visible;
         pointer-events: auto;
-        transform: translateX(0);
+    }
+
+    &__background {
+        position: relative;
+        padding: 6rem 0 4rem;
+        background: url(../../images/contour-large.png) center no-repeat;
+        background-size: cover;
+
+        @screen md {
+            padding: 10rem 1rem 6rem;
+        }
+
+        &:before {
+            display: none;
+        }
     }
 
     &__nav {
 
-        @apply pt-5 md:pt-10;
-
+        ul {
+            padding: 0;
+        }
 
         li {
-            @apply text-lg md:text-2xl lg:text-4xl mb-4 md:mb-5 last:mb-0;
-
-
-            &.large-item {
-                @apply text-2xl md:text-3xl lg:text-5xl;
-            }
+            @apply text-2xl lg:text-3xxl mb-4 md:mb-5 last:mb-0 font-semibold font-display;
 
 
             a {
@@ -56,6 +50,20 @@
             }
         }
 
+        &--secondary {
+            li {
+                @apply text-xl lg:text-xxl mb-3 last:mb-0 font-light font-body uppercase underline;
+            }
+        }
+    }
 
+    .locations__item {
+        @apply mb-4;
+    }
+
+    .stripes {
+        position: absolute;
+        top: 0;
+        right: 0;
     }
 }

@@ -11,7 +11,7 @@ $classes[] = padding_classes();
 
 ?>
 
-<section id="<?php echo $id; ?>" class="<?php echo implode( ' ', $classes ); ?> <?php echo 'block-' . $slug; ?>">
+<section id="<?php echo $id; ?>" class="<?php echo implode( ' ', $classes ); ?> <?php echo 'block-' . $slug; ?>" data-aos="fade">
     <div class="container mx-auto">
         <?php include( get_theme_file_path( "/template-parts/blocks/{$slug}.php" ) ); ?>
     </div>
