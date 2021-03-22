@@ -64,7 +64,7 @@ canvas {
         top: 50%;
         right: calc( .5rem + 3vw );
         transform: translateY(-50%);
-        width: 30%;
+        width: 30%!important;
         max-width: none;
         padding: 3rem;
         margin: 0;

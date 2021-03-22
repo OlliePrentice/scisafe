@@ -1,9 +1,9 @@
 import $ from 'jquery';
-import Swiper, {Navigation, Pagination, EffectFade, Autoplay} from "swiper";
+import Swiper, {Mousewheel, Navigation, Pagination, EffectFade, Autoplay} from "swiper";
 import resizeEvent from "../utilities/triggerResizeEvent";
 import 'swiper/swiper-bundle.css';
 
-Swiper.use([Navigation, Pagination, EffectFade, Autoplay]);
+Swiper.use([Mousewheel, Navigation, Pagination, EffectFade, Autoplay]);
 
 function Sliders() {
 
@@ -23,11 +23,12 @@ function Sliders() {
         carousel.on('slideChangeTransitionEnd', () => {
             window.dispatchEvent(resizeEvent);
         });
-    }
+    };
 
     $('.timeline__events').each((_index, elem) => {
 
         initSwiper(elem, {
+            mousewheel: true,
             slidesPerView: 'auto',
             spaceBetween: 50,
             breakpoints: {
@@ -81,6 +82,6 @@ function Sliders() {
     updateDimensions();
 
 
-};
+}
 
 export default Sliders;

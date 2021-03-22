@@ -6,7 +6,7 @@ $copy       = get_field( 'copy' );
 ?>
 
 <div class="text-content lg:pl-14">
-    <div class="md:w-8/12">
+    <div class="lg:w-8/12">
         <?php if ( $heading) : ?>
             <h3><?php echo $heading; ?></h3>
         <?php endif; ?>

@@ -7,6 +7,7 @@ import "regenerator-runtime/runtime";
 // Load Vendor
 import AOS from 'aos';
 import '@fancyapps/fancybox/dist/jquery.fancybox';
+import objectFitVideos from 'object-fit-videos';
 
 // Load App
 import Menu from './app/Menu';
@@ -20,6 +21,8 @@ import ThreeCube from './app/cube/3DCube';
 (function() {
     
     ThreeCube(); 
+
+    objectFitVideos(document.querySelectorAll('.fit-vid'));
 
  })();
 

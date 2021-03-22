@@ -23,12 +23,12 @@ $trustpilot     = get_field( 'trustpilot', 'options' );
             <div class="px-4 w-1/2 lg:w-auto">
                 <div class="inline-block text-center">
                     <?php if ($logo) : ?>
-                        <div class="main-footer__logo pt-10">
+                        <div class="main-footer__logo pt-10 mb-1">
                             <a href="<?= home_url('/'); ?>" class="main-footer__logo-link"><img
                                         src="<?= $logo['url']; ?>" alt="<?= $logo['alt']; ?>"></a>
                         </div>
                     <?php endif; ?>
-                    <span class="text-sm"><?php echo get_bloginfo( 'description' ); ?></span>
+                    <span class="text-sm leading-tight inline-block"><?php echo get_bloginfo( 'description' ); ?></span>
                 </div>
             </div>
         </div>

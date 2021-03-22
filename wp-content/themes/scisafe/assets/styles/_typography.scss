@@ -3,7 +3,13 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 h1,h2,h3,h4,h5,h6,p,ul,ol,li {
-    @apply mb-5;
+    @apply mb-6;
+}
+
+p {
+    + h1, + h2, + h3, + h4, + h5, + h6 {
+        @apply pt-3;
+    }
 }
 
 h1 {

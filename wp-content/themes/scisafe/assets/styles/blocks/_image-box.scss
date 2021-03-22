@@ -1,6 +1,13 @@
 .image-box {
     z-index: 1;
 
+    &.image-box--right {
+        .image-box__image {
+            left: 0;
+            right: auto;
+        }
+    }
+
     &--small, &--medium {
         .image-box__image {
             height: 395px;

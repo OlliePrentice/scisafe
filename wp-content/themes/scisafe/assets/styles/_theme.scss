@@ -1,7 +1,7 @@
 body {
     padding-top: 70px;
 
-    @apply font-body font-light text-lg sm:text-xl md:text-xxl tracking-wide text-primary;
+    @apply font-body font-light text-xlg sm:text-xl md:text-xxl tracking-wide text-primary;
 
     @screen sm {
         padding-top: 90px;
@@ -9,6 +9,10 @@ body {
 
     @screen md {
         padding-top: 115px;
+    }
+
+    &.pt-0 {
+        padding-top: 0;
     }
 
 }
@@ -34,8 +38,23 @@ ul {
             background: url(../images/svgs/bullet.svg) center no-repeat;
             background-size: contain;
         }
+
+        ul,ol {
+            @apply mt-5;
+        }
+    
+    }
+
+
+    ol {
+        li {
+            &:before {
+                display: none;
+            }
+        }
     }
 }
+
 
 a {
     @apply transition;
@@ -301,6 +320,12 @@ body {
         height: 50px;
         margin: 0 .4rem;
         transform: translateY(0);
+
+        &:hover {
+            &:before {
+                @apply bg-senary;
+            }
+        }
 
         &:after {
             display: none;

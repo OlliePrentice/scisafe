@@ -4,7 +4,9 @@ import resizeEvent from "../utilities/triggerResizeEvent";
 import JSShare from "js-share";
 
 function General() {
-    $('.mh').matchHeight();
+    $('.card-post__header').matchHeight({
+        byRow: false
+    });
 
     $.fn.matchHeight._afterUpdate = function(_event, _groups) {
         window.dispatchEvent(resizeEvent);

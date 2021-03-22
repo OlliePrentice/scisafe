@@ -22,6 +22,16 @@ function scrollTo() {
 
     });
 
+    $(".scroll-next").on('click', (e) => {
+        const $this = $(e.currentTarget);
+
+        $('html, body').animate({
+            scrollTop: $this.closest('section').next().offset().top - $('.main-header').outerHeight()
+        }, 600);
+
+
+    });
+
 }
 
 export default scrollTo;

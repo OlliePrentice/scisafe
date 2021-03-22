@@ -72,11 +72,16 @@ add_filter('body_class', function($classes) {
         $wp_query->post = $wp_query->posts[0];
         setup_postdata($wp_query->post);
         $classes[] = $page_name_prefix . $wp_query->post->post_name;
+
+        if(get_field('remove_header_padding', get_the_ID())) {
+            $classes[] = 'pt-0';
+        }
     }
     if (is_multisite()) {
         global $blog_id;
         $classes[] = $site_prefix . $blog_id;
     }
+    
     return $classes;
 });
 
